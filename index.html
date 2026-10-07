@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faraz Shah | Technical Solutions Specialist</title>
+  
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="High-Turnaround Technical Implementations, Working Prototypes & Engineering Simulations by Faraz Shah. External technical problem-solver for delivery desks.">
+  <meta name="author" content="Faraz Shah">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0f172a',
+              card: '#1e293b',
+              surface: '#334155',
+              cyan: '#06b6d4',
+              emerald: '#10b981'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="bg-[#0f172a] text-[#f8fafc] antialiased selection:bg-cyan-500 selection:text-slate-900 min-h-screen">
+
+  <!-- ==================== TOP NAVIGATION ==================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 nav-backdrop">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand -->
+      <a href="#hero" class="flex items-center gap-2.5 group">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center font-mono font-bold text-sm text-cyan-400 group-hover:border-cyan-500/50 transition-colors">
+          FS
+        </div>
+        <div>
+          <span class="font-bold text-base text-white tracking-tight">Faraz Shah</span>
+          <span class="hidden sm:inline-block text-xs text-slate-400 ml-1.5 font-mono">| Technical Solutions Specialist</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-300">
+        <a href="#track-record" class="hover:text-cyan-400 transition-colors">Track Record</a>
+        <a href="#trust-pillars" class="hover:text-cyan-400 transition-colors">Trust Pillars</a>
+        <a href="#capabilities" class="hover:text-cyan-400 transition-colors">Capabilities</a>
+        <a href="#samples" class="hover:text-cyan-400 transition-colors">Case Snapshots</a>
+        <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Desktop Direct WhatsApp Action -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://wa.me/923183052533" data-action="whatsapp" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-400 border border-emerald-500/30 text-xs font-semibold font-mono transition-colors">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+          <span>15-Min Check</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button type="button" id="mobile-menu-btn" aria-label="Open mobile menu" class="md:hidden p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-slate-950/95 hidden flex flex-col justify-between p-6">
+    <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center font-mono font-bold text-sm text-cyan-400">FS</div>
+        <span class="font-bold text-white">Faraz Shah</span>
+      </div>
+      <button type="button" id="mobile-menu-close" aria-label="Close menu" class="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <nav class="flex flex-col gap-5 py-6 text-base font-medium">
+      <a href="#track-record" class="mobile-nav-link text-slate-300 hover:text-cyan-400 transition-colors">Track Record & Metrics</a>
+      <a href="#trust-pillars" class="mobile-nav-link text-slate-300 hover:text-cyan-400 transition-colors">Why Delivery Desks Rely on My Workflow</a>
+      <a href="#capabilities" class="mobile-nav-link text-slate-300 hover:text-cyan-400 transition-colors">Technical Capabilities Matrix</a>
+      <a href="#samples" class="mobile-nav-link text-slate-300 hover:text-cyan-400 transition-colors">Sample Problem Solves</a>
+      <a href="#contact" class="mobile-nav-link text-slate-300 hover:text-cyan-400 transition-colors">Urgent Feasibility Review</a>
+    </nav>
+
+    <div class="pt-4 border-t border-slate-800">
+      <a href="https://wa.me/923183052533" data-action="whatsapp" class="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-emerald-500 text-slate-950 font-bold text-sm">
+        <i data-lucide="message-circle" class="w-4 h-4"></i>
+        <span>WhatsApp: +92 318 3052533</span>
+      </a>
+    </div>
+  </div>
+
+  <main class="pt-16">
+
+    <!-- ==================== 1. HEADER & HERO SECTION ==================== -->
+    <section id="hero" class="py-16 sm:py-24 border-b border-slate-800/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl space-y-6">
+          
+          <!-- Status Badge -->
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-slate-800 border border-slate-700 text-xs font-mono text-emerald-400">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 radar-ping"></span>
+            <span>Available for Urgent 24–48h Technical Briefs</span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
+            High-Turnaround Technical Implementations, Mobile Apps & Engineering Simulations
+          </h1>
+
+          <!-- Subheadline -->
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
+            External technical problem-solver for delivery desks. Over 80+ completed projects across Java, React Native, Node.js, C#, MATLAB, and Systems Networking with near-zero revision overhead.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="pt-2 flex flex-wrap items-center gap-3.5">
+            <!-- Primary (Cyan): Free 15-Min Doability Check -->
+            <a href="https://wa.me/923183052533" data-action="whatsapp" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm transition-colors shadow-lg shadow-cyan-500/20">
+              <i data-lucide="message-circle" class="w-4 h-4 text-slate-950"></i>
+              <span>Free 15-Min Doability Check</span>
+            </a>
+
+            <!-- Secondary (Outline): View Track Record -->
+            <a href="#track-record" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-sm font-semibold transition-colors">
+              <span>View Track Record</span>
+              <i data-lucide="arrow-down" class="w-4 h-4 text-slate-400"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 2. PROVEN TRACK RECORD & PERFORMANCE STATS ==================== -->
+    <section id="track-record" class="py-16 sm:py-20 border-b border-slate-800/80 bg-slate-900/60">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="mb-10 space-y-2">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-mono">
+            <i data-lucide="bar-chart-3" class="w-3.5 h-3.5 text-cyan-400"></i>
+            <span>Execution Track Record</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            Proven Track Record & Performance Stats
+          </h2>
+          <p class="text-slate-400 text-sm max-w-2xl">
+            Verified execution metrics over 18+ months of technical deliveries across outsourcing desks, vendor partnerships, and urgent sprints.
+          </p>
+        </div>
+
+        <!-- 5 Clear Metric Cards in a Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          
+          <!-- Metric 1 -->
+          <div class="tech-card rounded-xl p-5 flex flex-col justify-between border-slate-700/80">
+            <div>
+              <div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-4">
+                <i data-lucide="folder-check" class="w-4 h-4"></i>
+              </div>
+              <div class="font-mono text-3xl sm:text-4xl font-extrabold text-cyan-400 tracking-tight">80+</div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80">
+              <div class="text-sm font-bold text-white leading-snug">Technical Projects Delivered</div>
+              <div class="text-xs text-slate-400 mt-1">Completed Over 18 Months</div>
+            </div>
+          </div>
+
+          <!-- Metric 2 -->
+          <div class="tech-card rounded-xl p-5 flex flex-col justify-between border-slate-700/80">
+            <div>
+              <div class="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4">
+                <i data-lucide="briefcase" class="w-4 h-4"></i>
+              </div>
+              <div class="font-mono text-3xl sm:text-4xl font-extrabold text-emerald-400 tracking-tight">60+</div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80">
+              <div class="text-sm font-bold text-white leading-snug">High-Complexity Briefs</div>
+              <div class="text-xs text-slate-400 mt-1">Handled across CIS Network & Partner Desks</div>
+            </div>
+          </div>
+
+          <!-- Metric 3 -->
+          <div class="tech-card rounded-xl p-5 flex flex-col justify-between border-slate-700/80">
+            <div>
+              <div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-4">
+                <i data-lucide="clock" class="w-4 h-4"></i>
+              </div>
+              <div class="font-mono text-3xl sm:text-4xl font-extrabold text-cyan-400 tracking-tight">20+</div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80">
+              <div class="text-sm font-bold text-white leading-snug">Urgent 24-48h Orders</div>
+              <div class="text-xs text-slate-400 mt-1">For 2 Regional Vendor Partners</div>
+            </div>
+          </div>
+
+          <!-- Metric 4 -->
+          <div class="tech-card rounded-xl p-5 flex flex-col justify-between border-slate-700/80">
+            <div>
+              <div class="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+              </div>
+              <div class="font-mono text-3xl sm:text-4xl font-extrabold text-emerald-400 tracking-tight">&lt; 2%</div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80">
+              <div class="text-sm font-bold text-white leading-snug">Lifetime Revision Rate</div>
+              <div class="text-xs text-slate-400 mt-1">Zero-Rework Quality Standard</div>
+            </div>
+          </div>
+
+          <!-- Metric 5 -->
+          <div class="tech-card rounded-xl p-5 flex flex-col justify-between border-slate-700/80 sm:col-span-2 lg:col-span-1">
+            <div>
+              <div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-4">
+                <i data-lucide="zap" class="w-4 h-4"></i>
+              </div>
+              <div class="font-mono text-3xl sm:text-4xl font-extrabold text-cyan-400 tracking-tight">24–48h</div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80">
+              <div class="text-sm font-bold text-white leading-snug">Standard Turnaround</div>
+              <div class="text-xs text-slate-400 mt-1">Fast Delivery Window</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 3. AGENCY & COORDINATOR TRUST PILLARS ==================== -->
+    <section id="trust-pillars" class="py-16 sm:py-20 border-b border-slate-800/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="mb-10 space-y-2">
+          <div class="text-xs font-mono text-emerald-400 uppercase tracking-wider font-semibold">Reliability Architecture</div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            Agency & Coordinator Trust Pillars
+          </h2>
+          <p class="text-slate-400 text-sm max-w-2xl">
+            Why delivery desks, agency managers, and academic coordinators rely on my workflow:
+          </p>
+        </div>
+
+        <!-- 4 Core Features into High-Contrast Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          
+          <!-- Pillar 1 -->
+          <div class="tech-card rounded-xl p-6 border-slate-700/80 space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center font-mono font-bold text-sm">
+                01
+              </div>
+              <span class="text-xs font-mono text-cyan-400">&le; 15 Mins Assessment</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Free 15-Minute Doability Review</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Send any PDF, brief, or grading rubric. I evaluate technical feasibility, verify scope, and confirm fixed delivery timelines within 15 minutes to safeguard client deadlines.
+            </p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="tech-card rounded-xl p-6 border-slate-700/80 space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-mono font-bold text-sm">
+                02
+              </div>
+              <span class="text-xs font-mono text-emerald-400">First-Class (70%+) Target</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Marking Rubric & Distinction Alignment</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Implementations and reports are structured strictly around academic assessment criteria and marking rubrics, targeting first-class (70%+) grading standards with complete test coverage.
+            </p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="tech-card rounded-xl p-6 border-slate-700/80 space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center font-mono font-bold text-sm">
+                03
+              </div>
+              <span class="text-xs font-mono text-cyan-400">All-in-One Handoff</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">The Zero-Revision Delivery Bundle</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Every completed handoff includes commented source code, step-by-step execution guides (README/Word), verified high-resolution output screenshots, and a 2-minute screen-recorded video walkthrough showing clean runtime execution.
+            </p>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="tech-card rounded-xl p-6 border-slate-700/80 space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-mono font-bold text-sm">
+                04
+              </div>
+              <span class="text-xs font-mono text-emerald-400">Zero Troubleshooting</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Zero Client-Side Setup Hassle</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Compilers, licenses, and local dependencies (MATLAB, Multisim, Packet Tracer, IDE runtimes) are handled entirely on my end. Clients receive verified output files without requiring complex local troubleshooting.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 4. CORE TECHNICAL CAPABILITIES MATRIX ==================== -->
+    <section id="capabilities" class="py-16 sm:py-20 border-b border-slate-800/80 bg-slate-900/40">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="mb-10 space-y-2">
+          <div class="text-xs font-mono text-cyan-400 uppercase tracking-wider font-semibold">Technical Spectrum</div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            Core Technical Capabilities Matrix
+          </h2>
+          <p class="text-slate-400 text-sm max-w-2xl">
+            Practical skills matrix categorized across 4 high-demand technical delivery areas:
+          </p>
+        </div>
+
+        <!-- 4 Categorized Technical Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          
+          <!-- Card 1: Programming & Applications -->
+          <div class="tech-card rounded-xl p-5 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 text-cyan-400 flex items-center justify-center">
+                <i data-lucide="code-2" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-base font-bold text-white">Programming & Applications</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Clean implementations in OOP, structured algorithms, cross-platform mobile apps, and server-side REST APIs.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-slate-300 border border-slate-700">Java (OOP, GUI, Console)</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-cyan-300 border border-cyan-500/20">React Native (iOS & Android Apps)</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-cyan-300 border border-cyan-500/20">Node.js & Express</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-slate-300 border border-slate-700">C# & C++</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-slate-300 border border-slate-700">Python</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-slate-300 border border-slate-700">RESTful APIs</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Databases & Data Modeling -->
+          <div class="tech-card rounded-xl p-5 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 text-emerald-400 flex items-center justify-center">
+                <i data-lucide="database" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-base font-bold text-white">Databases & Data Modeling</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Relational schema normalization, complex SQL queries, transaction consistency, and indexing.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-slate-300 border border-slate-700">MySQL</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-slate-300 border border-slate-700">PostgreSQL</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-slate-300 border border-slate-700">SQLite</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-emerald-300 border border-emerald-500/20">Relational Schema Design</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-slate-300 border border-slate-700">Query Optimization</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Engineering & Simulations -->
+          <div class="tech-card rounded-xl p-5 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 text-cyan-400 flex items-center justify-center">
+                <i data-lucide="cpu" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-base font-bold text-white">Engineering & Simulations</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Dynamic mathematical models, differential numerical solvers, and electronic circuit simulations.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-cyan-300 border border-cyan-500/20">MATLAB</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-cyan-300 border border-cyan-500/20">Simulink</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-slate-300 border border-slate-700">NI Multisim</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-slate-300 border border-slate-700">Proteus Circuits</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-slate-300 border border-slate-700">Logic Validation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Systems & Networking -->
+          <div class="tech-card rounded-xl p-5 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 text-emerald-400 flex items-center justify-center">
+                <i data-lucide="network" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-base font-bold text-white">Systems & Networking</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Subnet planning, enterprise VLAN segmentation, dynamic routing protocols, and multi-VM orchestration.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-emerald-300 border border-emerald-500/20">Cisco Packet Tracer</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-slate-300 border border-slate-700">VLANs & Routing</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-slate-300 border border-slate-700">NAT / DHCP</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-slate-300 border border-slate-700">Linux</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-slate-300 border border-slate-700">Windows Server</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-800 text-slate-300 border border-slate-700">VMware / VirtualBox</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 5. SAMPLE PROBLEM SOLVES (CASE SNAPSHOTS) ==================== -->
+    <section id="samples" class="py-16 sm:py-20 border-b border-slate-800/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="mb-10 space-y-2">
+          <div class="text-xs font-mono text-cyan-400 uppercase tracking-wider font-semibold">Practical Case Snapshots</div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            Sample Problem Solves
+          </h2>
+          <p class="text-slate-400 text-sm max-w-2xl">
+            Concrete snapshots of technical deliveries executed with verified proof-of-work bundles:
+          </p>
+        </div>
+
+        <!-- 4 Case Snapshots Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Case 1 -->
+          <div class="tech-card rounded-xl p-6 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between text-xs font-mono">
+                <span class="text-cyan-400 bg-cyan-950/60 border border-cyan-500/30 px-2.5 py-0.5 rounded">Case 01 • Programming</span>
+                <span class="text-slate-400">24–48h SLA</span>
+              </div>
+              <h3 class="text-lg font-bold text-white">Full-Stack Inventory & Ordering Engine</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                User role authentication, inventory management, dynamic transaction logic, and Postman API documentation.
+              </p>
+
+              <!-- Delivery Package Pill -->
+              <div class="bg-slate-900/80 border border-slate-800 rounded-lg p-3 text-xs text-slate-400 space-y-1">
+                <div class="text-slate-200 font-mono font-medium flex items-center gap-1.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Included Deliverable Package:
+                </div>
+                <div>MVC Source Code + Database Migration Scripts + 40+ Postman Endpoint Collection + 2-Min Walkthrough Video.</div>
+              </div>
+
+              <!-- Tech Stack Tags -->
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">Java</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-800 text-cyan-300 border border-cyan-500/20">React Native</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">Node.js</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">SQL</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">Postman Docs</span>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-4 border-t border-slate-800 flex items-center justify-between">
+              <button type="button" data-open-case="inventory" class="text-xs font-mono font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+                <span>View Full Deliverable Spec</span>
+                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+              </button>
+              <a href="https://wa.me/923183052533?text=Hi%20Faraz,%20I%20have%20a%20Programming/Backend%20task%20similar%20to%20Case%2001." target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-slate-400 hover:text-emerald-400 transition-colors">
+                Quick Inquire &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Case 2 -->
+          <div class="tech-card rounded-xl p-6 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between text-xs font-mono">
+                <span class="text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2.5 py-0.5 rounded">Case 02 • Simulation</span>
+                <span class="text-slate-400">24h SLA</span>
+              </div>
+              <h3 class="text-lg font-bold text-white">Analog Filter & Operational Amplifier Simulation</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Sensor signal conditioning circuit with virtual oscilloscope waveform captures and frequency response analysis.
+              </p>
+
+              <!-- Delivery Package Pill -->
+              <div class="bg-slate-900/80 border border-slate-800 rounded-lg p-3 text-xs text-slate-400 space-y-1">
+                <div class="text-slate-200 font-mono font-medium flex items-center gap-1.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Included Deliverable Package:
+                </div>
+                <div>Multisim `.ms14` & Proteus Schematic Files + Oscilloscope Waveform Captures + Frequency Bode Sweeps.</div>
+              </div>
+
+              <!-- Tech Stack Tags -->
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">NI Multisim</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">Proteus</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-800 text-emerald-300 border border-emerald-500/20">Waveform Sweeps</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">Filter Theory</span>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-4 border-t border-slate-800 flex items-center justify-between">
+              <button type="button" data-open-case="analog_filter" class="text-xs font-mono font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+                <span>View Full Deliverable Spec</span>
+                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+              </button>
+              <a href="https://wa.me/923183052533?text=Hi%20Faraz,%20I%20have%20a%20Circuit/Simulation%20task%20similar%20to%20Case%2002." target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-slate-400 hover:text-emerald-400 transition-colors">
+                Quick Inquire &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Case 3 -->
+          <div class="tech-card rounded-xl p-6 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between text-xs font-mono">
+                <span class="text-cyan-400 bg-cyan-950/60 border border-cyan-500/30 px-2.5 py-0.5 rounded">Case 03 • Networking</span>
+                <span class="text-slate-400">24h SLA</span>
+              </div>
+              <h3 class="text-lg font-bold text-white">Enterprise Multi-Subnet Network Topology</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Segmented VLAN network design with edge firewall routing, DHCP configuration, and ping test validation.
+              </p>
+
+              <!-- Delivery Package Pill -->
+              <div class="bg-slate-900/80 border border-slate-800 rounded-lg p-3 text-xs text-slate-400 space-y-1">
+                <div class="text-slate-200 font-mono font-medium flex items-center gap-1.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Included Deliverable Package:
+                </div>
+                <div>Packet Tracer `.pkt` Topology File + Router/Switch CLI Startup Configurations + IP Subnet Table + ICMP Logs.</div>
+              </div>
+
+              <!-- Tech Stack Tags -->
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">Cisco Packet Tracer</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-800 text-cyan-300 border border-cyan-500/20">VLANs</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">Edge Firewall Routing</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">NAT / DHCP</span>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-4 border-t border-slate-800 flex items-center justify-between">
+              <button type="button" data-open-case="network_topology" class="text-xs font-mono font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+                <span>View Full Deliverable Spec</span>
+                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+              </button>
+              <a href="https://wa.me/923183052533?text=Hi%20Faraz,%20I%20have%20a%20Networking/PacketTracer%20task%20similar%20to%20Case%2003." target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-slate-400 hover:text-emerald-400 transition-colors">
+                Quick Inquire &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Case 4 -->
+          <div class="tech-card rounded-xl p-6 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between text-xs font-mono">
+                <span class="text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2.5 py-0.5 rounded">Case 04 • Modeling</span>
+                <span class="text-slate-400">24–48h SLA</span>
+              </div>
+              <h3 class="text-lg font-bold text-white">Vehicle Ride Comfort & Dynamic Suspension Modeling</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Differential equation modeling comparing variable spring stiffness against dampening coefficients for ride displacement plots.
+              </p>
+
+              <!-- Delivery Package Pill -->
+              <div class="bg-slate-900/80 border border-slate-800 rounded-lg p-3 text-xs text-slate-400 space-y-1">
+                <div class="text-slate-200 font-mono font-medium flex items-center gap-1.5">
+                  <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Included Deliverable Package:
+                </div>
+                <div>MATLAB `.m` Scripts + Simulink `.slx` Model + Side-by-Side Response Plots + Rubric Mathematical Notes.</div>
+              </div>
+
+              <!-- Tech Stack Tags -->
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">MATLAB</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-800 text-emerald-300 border border-emerald-500/20">Simulink</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">Differential Equations</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">State-Space</span>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-4 border-t border-slate-800 flex items-center justify-between">
+              <button type="button" data-open-case="suspension_modeling" class="text-xs font-mono font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+                <span>View Full Deliverable Spec</span>
+                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+              </button>
+              <a href="https://wa.me/923183052533?text=Hi%20Faraz,%20I%20have%20a%20MATLAB/Simulink%20task%20similar%20to%20Case%2004." target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-slate-400 hover:text-emerald-400 transition-colors">
+                Quick Inquire &rarr;
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 6. DIRECT CALL TO ACTION (URGENT ASSESSMENT BANNER) ==================== -->
+    <section id="contact" class="py-16 sm:py-24 bg-slate-900/60">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="bg-[#1e293b] border border-slate-700 rounded-2xl p-6 sm:p-10 space-y-8">
+          
+          <!-- Headline & Subtext -->
+          <div class="text-center space-y-3 max-w-xl mx-auto">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mx-auto">
+              <i data-lucide="zap" class="w-6 h-6"></i>
+            </div>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-mono">
+              <i data-lucide="clock" class="w-3.5 h-3.5 text-cyan-400"></i>
+              <span>15-Minute Review</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+              Stuck on an Urgent Technical Brief or Coordinator Bottleneck?
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Send your PDF requirements, code files, or simulation brief directly via WhatsApp for an immediate feasibility confirmation.
+            </p>
+          </div>
+
+          <!-- Buttons (WhatsApp, Email, LinkedIn) -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-2">
+            
+            <!-- WhatsApp -->
+            <a href="https://wa.me/923183052533" data-action="whatsapp" class="flex flex-col items-center justify-center p-4 rounded-xl bg-slate-900/80 hover:bg-slate-900 border border-emerald-500/30 hover:border-emerald-500/60 transition-all text-center group">
+              <div class="w-10 h-10 rounded-lg bg-emerald-500/15 text-emerald-400 flex items-center justify-center mb-2 group-hover:scale-105 transition-transform">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+              </div>
+              <span class="text-xs font-mono text-slate-400">Direct WhatsApp</span>
+              <span class="text-sm font-bold text-white mt-0.5">+92 318 3052533</span>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:farazshah9095@gmail.com" data-action="email" class="flex flex-col items-center justify-center p-4 rounded-xl bg-slate-900/80 hover:bg-slate-900 border border-cyan-500/30 hover:border-cyan-500/60 transition-all text-center group">
+              <div class="w-10 h-10 rounded-lg bg-cyan-500/15 text-cyan-400 flex items-center justify-center mb-2 group-hover:scale-105 transition-transform">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <span class="text-xs font-mono text-slate-400">Direct Email</span>
+              <span class="text-xs sm:text-sm font-bold text-white mt-0.5 truncate max-w-full px-2">farazshah9095@gmail.com</span>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/faraz-shah-4168ab441/" target="_blank" rel="noopener noreferrer" data-action="linkedin" class="flex flex-col items-center justify-center p-4 rounded-xl bg-slate-900/80 hover:bg-slate-900 border border-slate-700 hover:border-cyan-500/50 transition-all text-center group">
+              <div class="w-10 h-10 rounded-lg bg-slate-800 text-slate-300 flex items-center justify-center mb-2 group-hover:scale-105 transition-transform">
+                <i data-lucide="linkedin" class="w-5 h-5"></i>
+              </div>
+              <span class="text-xs font-mono text-slate-400">LinkedIn Profile</span>
+              <span class="text-sm font-bold text-white mt-0.5">Faraz Shah</span>
+            </a>
+
+          </div>
+
+          <!-- Quick Copy Strip -->
+          <div class="pt-4 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs font-mono text-slate-400">
+            <span class="flex items-center gap-1.5 text-slate-300">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+              Direct reachout • Available for immediate review
+            </span>
+            <div class="flex items-center gap-2">
+              <span>Quick copy:</span>
+              <button type="button" data-copy="+92 318 3052533" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition-colors">Phone</button>
+              <button type="button" data-copy="farazshah9095@gmail.com" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition-colors">Email</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== 7. FOOTER ==================== -->
+  <footer class="border-t border-slate-800 py-8 bg-[#0f172a]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      <div>
+        <p>© Faraz Shah • Specialized Technical Delivery & Simulation Consulting.</p>
+      </div>
+
+      <div class="flex items-center gap-5">
+        <a href="#track-record" class="hover:text-cyan-400 transition-colors">Track Record</a>
+        <a href="#trust-pillars" class="hover:text-cyan-400 transition-colors">Trust Pillars</a>
+        <a href="#capabilities" class="hover:text-cyan-400 transition-colors">Capabilities</a>
+        <a href="#samples" class="hover:text-cyan-400 transition-colors">Samples</a>
+        <a href="https://www.linkedin.com/in/faraz-shah-4168ab441/" target="_blank" rel="noopener noreferrer" data-action="linkedin" class="hover:text-cyan-400 transition-colors inline-flex items-center gap-1.5" title="LinkedIn">
+          <i data-lucide="linkedin" class="w-4 h-4 text-cyan-400"></i>
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== CASE SNAPSHOT DETAILS MODAL ==================== -->
+  <div id="case-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden flex items-center justify-center p-4 overflow-y-auto">
+    <div class="relative w-full max-w-xl bg-slate-900 border border-slate-700 rounded-xl shadow-2xl p-6 sm:p-7 space-y-5 max-h-[90vh] overflow-y-auto">
+      
+      <!-- Modal Header -->
+      <div class="flex items-start justify-between gap-3 border-b border-slate-800 pb-3">
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <span id="modal-category" class="px-2 py-0.5 rounded text-[11px] font-mono bg-cyan-950/60 text-cyan-300 border border-cyan-500/30">Category</span>
+            <span id="modal-turnaround" class="px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-950/60 text-emerald-300 border border-emerald-500/30">Turnaround</span>
+          </div>
+          <h3 id="modal-title" class="text-xl font-bold text-white">Project Title</h3>
+        </div>
+        <button type="button" id="modal-close-btn" aria-label="Close modal" class="p-1.5 text-slate-400 hover:text-white rounded hover:bg-slate-800">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Problem Brief -->
+      <p id="modal-brief" class="text-xs sm:text-sm text-slate-300 leading-relaxed"></p>
+
+      <!-- Tech Stack -->
+      <div class="space-y-1.5">
+        <div class="text-[11px] font-mono text-slate-400 uppercase">Technologies & Tools</div>
+        <div id="modal-stack" class="flex flex-wrap gap-1.5"></div>
+      </div>
+
+      <!-- Complete Package Deliverables -->
+      <div class="space-y-2">
+        <div class="text-[11px] font-mono text-emerald-400 uppercase font-semibold">Standard Package Deliverables Included</div>
+        <ul id="modal-deliverables" class="space-y-2 bg-slate-950/60 border border-slate-800/80 p-3.5 rounded-lg"></ul>
+      </div>
+
+      <!-- Technical Highlights -->
+      <div class="space-y-1.5">
+        <div class="text-[11px] font-mono text-cyan-400 uppercase font-semibold">Technical Highlights & Implementation Details</div>
+        <ul id="modal-highlights" class="space-y-1.5"></ul>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="pt-3 border-t border-slate-800 flex items-center justify-end gap-2.5">
+        <button type="button" id="modal-close-footer-btn" class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-mono transition-colors">
+          Close
+        </button>
+        <a id="modal-inquire-btn" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-bold transition-colors">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+          <span>Discuss via WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
